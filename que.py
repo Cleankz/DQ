@@ -7,23 +7,23 @@ class Deque:
         array.append(item)
         self.stack = array
     def addTail(self, item):
-        a = []
-        a.append(item)
-        a.append(self.stack)
-        self.stack = a
+        ARRAY = [] # a - ARRAY
+        ARRAY.append(item)
+        ARRAY.append(self.stack)
+        self.stack = ARRAY
     def removeFront(self):
         if len(self.stack) != 0:
-            a = self.stack[len(self.stack)-1]
+            ARRAY = self.stack[len(self.stack)-1]
             del self.stack[len(self.stack)-1]
-            return a
+            return ARRAY
         else:
             return None # если очередь пуста
     def removeTail(self):
         # удаление из хвоста
         if len(self.stack) != 0:
-            a = self.stack[0]
+            ARRAY = self.stack[0]
             del self.stack[0]
-            return a
+            return ARRAY
         else:
             return None # если очередь пуста
     def size(self):
